@@ -86,7 +86,8 @@ resetGame(){
     if (winner) {
       status = 'Winner: ' + winner;
     } else {
-      status = 'Next player: ' + (this.state.xIsNext ? 'Minh' : 'Bibek');
+
+      status = 'Next player: ' + (this.state.xIsNext ? 'Bibek' : 'Minh');
     }
 
     return (
