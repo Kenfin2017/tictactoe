@@ -203,12 +203,12 @@ class Game extends React.Component {
             squares={current.squares}
             onClick={i => this.handleClick(i)}
           />
-        
-        {/*Status Region*/}
         </div>
-        <div className="game-info">
-          <div>{status}</div>
-          <ol>{moves}</ol>
+        {/*Status Region*/}
+        
+        <div>
+          <div  className="game-info"> {status} </div>
+          <div className="game-moves"> <ol>{moves}</ol> </div>
         </div>
       </div>
     );
