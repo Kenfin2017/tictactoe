@@ -9,7 +9,7 @@ function Square(props) {
     </button>
   );
 }
-
+// board with bootsrap styling
 class Board extends React.Component {
   renderSquare(i) {
     return (
@@ -116,15 +116,19 @@ class Game extends React.Component {
     }
 
     return (
-      <div className="game">
+      <div className="game" >
+        <p class="mb-3 h1"> WELCOME TO GAME OF TICTACTOE!!!</p>
         <div className="game-board">
           <Board
             squares={current.squares}
             onClick={i => this.handleClick(i)}
           />
+          
         </div>
         <div className="game-info">
+        
           <div>{status}</div>
+
           <ol>{moves}</ol>
         </div>
       </div>
