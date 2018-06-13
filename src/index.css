@@ -1,14 +1,10 @@
 body {
-
   font: 20px "Century Gothic", Futura, sans-serif;
-  margin: 300px 0px 200px 700px;
   background-color:#9c9f84;
 }
 
-p{
-   font-size: 30px;
-   font-weight: bold;
-  font-family: Helvetica, Verdana;
+.box{
+  margin: 200px 0px 200px 700px; 
 }
 
 ol, ul {
@@ -50,6 +46,7 @@ ol, ul {
 }
 
 .game {
+  margin: 150px 0px 200px 700px; 
   display: flex;
   flex-direction: column;
   float: center;
@@ -57,12 +54,24 @@ ol, ul {
 
 .game-info {
   position: relative;
-  bottom: 40px;
-  right: 250px;
+  bottom: 330px;
+  right: -20px;
 }
 
 .game-moves{
  position: relative;
- bottom: 45px;
- left: 20px;
+ bottom: 320px;
+ left: 300px;
 }
+
+.welcome{
+font-size: 30px;
+font-weight: bold;
+font-family: Helvetica, Verdana;
+margin: 40px 0px 0px 600px;
+}
+
+.players{
+  margin: 100px 0px 0px 700px; 
+}
+

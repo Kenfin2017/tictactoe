@@ -187,17 +187,19 @@ class Game extends React.Component {
       status = "Next player: " + (this.state.xIsNext ? p1 : p2);
     }
     return (
-      <div className="game" >
+        <div>
+        <p class="welcome"> WELCOME TO GAME OF TICTACTOE!!!</p>
         {/*Player names region*/}
-        <div class="col-sm-5">
+        <div class="players">
             <label>Player 1 (X):</label>
               <input name="player1" type="text" onChange={this.handleInputChange} placeholder="player 1 name" /> <br/>
             <label>Player 2 (O):</label>
             <input name="player2" type="text" onChange={this.handleInputChange} placeholder="player 2 name" />
-        </div>
+            </div>
+
+       <div className="game" >
 
         {/*Board Region*/}
-        <p class="mb-3 h"> WELCOME TO GAME OF TICTACTOE!!!</p>
         <div className="game-board">
           <Board
             squares={current.squares}
@@ -211,6 +213,7 @@ class Game extends React.Component {
           <div className="game-moves"> <ol>{moves}</ol> </div>
         </div>
       </div>
+     </div>
     );
   }
 }
