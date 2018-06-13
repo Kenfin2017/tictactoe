@@ -69,17 +69,24 @@ class Game extends React.Component {
       xIsNext: !this.state.xIsNext,
     });
   }
+resetGame(){
+    const history = this.state.history;
+    const current = history[history.length - 1];
+    const squares = current.squares.slice();
+     
+}
   
   render() {
     const history = this.state.history;
     const current = history[history.length - 1];
     const winner = calculateWinner(current.squares);
-
+      var player1 = '';
+      var player2 = '';
     let status;
     if (winner) {
       status = 'Winner: ' + winner;
     } else {
-      status = 'Next player: ' + (this.state.xIsNext ? 'X' : 'O');
+      status = 'Next player: ' + (this.state.xIsNext ? 'Minh' : 'Bibek');
     }
 
     return (
@@ -89,11 +96,12 @@ class Game extends React.Component {
             squares={current.squares}
             onClick={(i) => this.handleClick(i)}
           />
+<button onclick = {() => this.resetGame()}>RESET</button>
         </div>
         <div className="game-info">
           <div>{status}</div>
-          <ol>{/* TODO */}</ol>
         </div>
+        
       </div>
     );
   }
