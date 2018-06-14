@@ -169,6 +169,7 @@ class Game extends React.Component {
         </li>
       );
     });
+
     let p1 = (this.state.player1 == "") ? "player 1" : this.state.player1;
     let p2 = (this.state.player2 == "") ? "player 2" : this.state.player2;
     let status;
@@ -187,7 +188,7 @@ class Game extends React.Component {
       status = "Next player: " + (this.state.xIsNext ? p1 : p2);
     }
     return (
-        <div>
+    <div className="box">
         <p class="welcome"> WELCOME TO GAME OF TICTACTOE!!!</p>
         {/*Player names region*/}
         <div class="players">
@@ -197,22 +198,20 @@ class Game extends React.Component {
             <input name="player2" type="text" onChange={this.handleInputChange} placeholder="player 2 name" />
             </div>
 
-       <div className="game" >
-
-        {/*Board Region*/}
-        <div className="game-board">
-          <Board
-            squares={current.squares}
-            onClick={i => this.handleClick(i)}
-          />
+        <div className="game" >
+            <div className="game-board">
+                <div className="status">
+                     {/*Board Region*/}
+                  <Board
+                    squares={current.squares}
+                    onClick={i => this.handleClick(i)}
+                  />
+                    {/*Status Region*/} 
+                    <div  className="game-info"> {status} </div>
+                </div>
+                <div className="game-moves"> <ol>{moves}</ol> </div>
+            </div>
         </div>
-        {/*Status Region*/}
-        
-        <div>
-          <div  className="game-info"> {status} </div>
-          <div className="game-moves"> <ol>{moves}</ol> </div>
-        </div>
-      </div>
      </div>
     );
   }

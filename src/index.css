@@ -1,16 +1,16 @@
 body {
-  font: 20px "Century Gothic", Futura, sans-serif;
-  background-color:#9c9f84;
+    font: 20px "Century Gothic", Futura, sans-serif;
+    background-color:#9c9f84;
+    text-align: center;
 }
 
 .box{
-  margin: 200px 0px 200px 700px; 
+  margin: auto; 
 }
 
 ol, ul {
   padding-left: 30px;
 }
-
 
 .board-row:after {
   clear: both;
@@ -46,32 +46,37 @@ ol, ul {
 }
 
 .game {
-  margin: 150px 0px 200px 700px; 
+  margin: auto; 
   display: flex;
   flex-direction: column;
-  float: center;
+}
+
+.game-board{
+    position: relative;
+    margin: auto;
+    display: flex;
+    flex-direction: row
 }
 
 .game-info {
   position: relative;
-  bottom: 330px;
-  right: -20px;
 }
 
 .game-moves{
  position: relative;
- bottom: 320px;
- left: 300px;
+ bottom: 10px;
+ right: -10px;
 }
 
 .welcome{
 font-size: 30px;
 font-weight: bold;
 font-family: Helvetica, Verdana;
-margin: 40px 0px 0px 600px;
+margin: 40px ;
 }
 
 .players{
-  margin: 100px 0px 0px 700px; 
+    position: relative;
+  margin: 40px; 
 }
 
